@@ -2,13 +2,13 @@ import { initializeApp, getApps, getApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCbHRzCL6PBUVG3H6tNaA6yt4IZ2I34Q14",
-  authDomain: "aquintel-d3560.firebaseapp.com",
-  projectId: "aquintel-d3560",
-  storageBucket: "aquintel-d3560.firebasestorage.app",
-  messagingSenderId: "208597623393",
-  appId: "1:208597623393:web:e38f4660ac3bfa25614020",
-  measurementId: "G-HV3QLRQSJ5",
+  apiKey: process.env.REACT_APP_API_KEY,
+  authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_APP_ID,
+  measurementId: process.env.REACT_APP_MEASUREMENT_ID,
 };
 
 const app = !getApps().length ? initializeApp(firebaseConfig) : getApp();
